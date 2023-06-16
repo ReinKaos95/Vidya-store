@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+*{
+  font-family: 'DM Sans', sans-serif;
+  margin: auto;
+}
+
+.navbar{
+  position: relative;
+  display: flex;
+  text-align: center;
+transition: .5%;
+background-color: rgba(161, 75, 189, 0.6);
+}
+
+
+.navbar ul{
+  text-decoration: none;
+    list-style: none;
+    justify-content: space-between;
+    display: flex;
+  align-items: center;
+}
+
+.navbar ul li{
+  text-decoration: none;
+  margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.navbar ul li a{
+  text-decoration: none;
+    margin: 0 12px;
+  font-weight: 400;
+  transition: .5%;
+}
+
+.navbar ul li a:hover{
+  text-decoration: none;
+  color: #ff5800;
+}
+
+img{
+  display: flex;
+  margin-top: 12px;
+}
+
+.welcome-cube{
+  width: 60%;
+  border: 25% solid;
+  box-shadow: 7.5px 5px 2.5px black;
+  margin: 50px 400px;
+  border: .5px solid #000000;
+}
+.welcome-cube h1{
+    text-decoration: underline;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.welcome-cube p{
+    text-align: center;
+    font-size: 20px;
+}
