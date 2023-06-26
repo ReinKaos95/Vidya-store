@@ -16,7 +16,7 @@
 				</ul>
 			</li>
 			<li><a href="../Vidya-store/informacion.php">Informacion</a></li>
-			<li><a href="#">Registrate</a></li>
+			<li><a href="../Vidya-store/register.php">Registrate</a></li>
 			</div>
 		</ul>
 	</nav>

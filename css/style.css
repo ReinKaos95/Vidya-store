@@ -213,3 +213,57 @@ footer{
   }
 
 }
+
+.form{
+            background-color: aliceblue;
+            margin: 0 5%;
+            padding: 30px 60px;
+            border-radius: 20px;
+        }
+        /*.row {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            
+        }
+        .col {
+            padding: 20px 40px;
+            text-align: left;
+            margin: auto;
+        }
+
+        .btn{
+            padding: 15px 40px;
+            background-color: tomato;
+            border: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+            color: azure;
+            font-weight: 700;
+            margin-top: -40px;
+           
+        }
+        */
+        .form-control{
+            width: 100%;
+            border: none;
+            padding: 10px 25px;
+        }
+        label{
+            display: block;
+            text-align: left;
+        }
+       
+
+        @media only screen and (max-width: 900px) {
+            .row {
+                
+                grid-template-columns: auto auto;
+                
+            }
+        }
+        @media only screen and (max-width: 600px) {
+            .row {
+                grid-template-columns: auto;
+                
+            }
+        }
