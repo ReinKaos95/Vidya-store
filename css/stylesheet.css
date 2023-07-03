@@ -215,48 +215,28 @@ footer{
 }
 
 .form{
-            background-color: aliceblue;
+            border: 1px solid #000;
             margin: 0 5%;
             padding: 30px 60px;
+            width: 40%;
             border-radius: 20px;
         }
-        /*.row {
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-            
-        }
-        .col {
-            padding: 20px 40px;
-            text-align: left;
-            margin: auto;
-        }
 
-        .btn{
-            padding: 15px 40px;
-            background-color: tomato;
-            border: none;
-            border-radius: 50px;
-            text-transform: uppercase;
-            color: azure;
-            font-weight: 700;
-            margin-top: -40px;
-           
-        }
-        */
         .form-control{
-            width: 100%;
+            width: 80%;
             border: none;
-            padding: 10px 25px;
+            padding: 5px 20px;
+            border: 1px solid #000;
         }
         label{
             display: block;
-            text-align: left;
         }
+
        
 
         @media only screen and (max-width: 900px) {
             .row {
-                
+
                 grid-template-columns: auto auto;
                 
             }
