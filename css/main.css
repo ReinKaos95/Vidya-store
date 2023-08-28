@@ -213,3 +213,17 @@ footer{
   }
 
 }
+
+@media and screen(max-width: 320px){
+.welcome-cube h1{
+    text-decoration: underline;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.welcome-cube p{
+    text-align: center;
+    font-size: 20px;
+}
+  
+}
