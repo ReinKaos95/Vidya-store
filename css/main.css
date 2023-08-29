@@ -146,20 +146,10 @@ img{
 }
 
 .welcome-cube{
-  width: 60%;
+  width: 100%;
   border: 25% solid;
   box-shadow: 7.5px 5px 2.5px black;
   border: .5px solid #000000;
-}
-.welcome-cube h1{
-    text-decoration: underline;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.welcome-cube p{
-    text-align: center;
-    font-size: 20px;
 }
 
 footer{
@@ -194,10 +184,10 @@ footer{
 }
 
 .welcome-cube{
-      position:absolute;
+    position:absolute;
     max-width:45%;
     max-height:45%;
-      top:50%;
+    top:60%;
     left:28%;
 }
 
@@ -214,16 +204,18 @@ footer{
 
 }
 
-@media and screen(max-width: 320px){
+@media only screen and (max-width: 320px) {
 .welcome-cube h1{
     text-decoration: underline;
   text-align: center;
-  margin-bottom: 20px;
+  font-size: 5.9vw;
+
 }
 
 .welcome-cube p{
     text-align: center;
-    font-size: 20px;
+ font-size: 2vmin;
+
 }
   
 }
