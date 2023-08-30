@@ -1,8 +1,12 @@
+<?php include 'layouts/navbar.php'; ?>
+
+<?php include 'layouts/style.php'; ?>
+
 <?php 
 
 	require 'config/db.php';
 	$id = $_GET['id'];
-	$sql = "SELECT * FROM producto WHERE id = '$id'";
+	$sql = "SELECT * FROM Juegos WHERE id = '$id'";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($result);
 	$id = $row[0];
@@ -21,7 +25,7 @@
 </head>
 <body>
 <center>
-		<form method="post" action="">
+		<form method="post" action="prueba.php" enctype="multipart/form-data">
 			<label>Prueba de edicion</label>
 			<br>
 			<input type="hidden" name="id" value="<?php echo $id ?>">
@@ -34,30 +38,16 @@
 			<br>
 			<label>Fecha de lanzamiento</label>
 			<input type="date" name="fecha_salida" value="<?php echo $fecha_salida ?>">
-			<br>
+		    <br>
+		    <label>Caratula</label>
+		    <input type="file" name="imagen">
+		    <br>
+		    <label>Precio</label>
+		    <input type="number" name="precio" value="<?php echo $precio ?>">
+
 			<input type="submit" name="submit">
 		</form>
 
 	</center>
 </body>
 </html>
-
-<?php 
-
-if (isset($_POST['submit'])) {
-include 'config/db.php';
-$id=$_POST['id'];
-$nombre = $_POST['nombre'];
-$marca = $_POST['marca'];
-$fecha_salida = $_POST['fecha_salida'];
-
-$sql = "UPDATE producto SET nombre='$nombre', marca='$marca', fecha_salida='$fecha_salida' WHERE id ='$id'";
-	if (mysqli_query($conn, $sql)) {
-		header("Location: index.php");
-	}else{
-		echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-	}
-
-}
-
- ?>

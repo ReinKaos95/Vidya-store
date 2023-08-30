@@ -12,11 +12,12 @@
 				<a href="#">Coleccion</a>
 				<ul class="dropdown">
 			<li><a href="../Vidya-store/juegos.php">Juegos</a></li>
-			<li><a href="#">Consolas</a></li>
+			<li><a href="../Vidya-store/consolas.php">Consolas</a></li>
 				</ul>
 			</li>
 			<li><a href="../Vidya-store/informacion.php">Informacion</a></li>
-			<li><a href="../Vidya-store/imagen.php">Prueba imagen</a></li>
+			<li><a href="../Vidya-store/register.php">Registrate</a></li>
+			<li><a href="../Vidya-store/admin/admin.php">Panel de administrador</a></li>
 			</div>
 		</ul>
 	</nav>
