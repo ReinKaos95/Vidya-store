@@ -1,9 +1,7 @@
 
 <link rel="stylesheet" type="text/css" href="../css/main.css" > 
 
-<link rel="stylesheet" href=
-"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.4/css/all.css">
-</link>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" crossorigin="anonymous">
 
 	<nav class="navbar">
 		<div class="logo">Vidya Store</div>
@@ -28,16 +26,23 @@
 		</ul>
 	</nav>
 
-
+<style type="text/css">
+	table#space {
+  border-collapse: separate;
+  border-spacing: 10px 5px;
+}
+</style>
 	 <div class="about">
 	 	<center>
 	 	<h1>Panel de moderacion</h1>
-	 	<table>
+	 	<table id="space">
 	 		<tr>
-	 			<td><span><i class="fa-solid fa-gamepad"></i></span></td>
-	 			<td></td>
-	 			<td></td>
-	 			<td></td>
+	 			<td><h3><i class="fa-solid fa-gamepad"></i><a href="">Juegos</a></h3></td>
+	 			<td><h3><i class="fa-brands fa-playstation"></i><a href="">Consolas</a></h3></td>
+	 			<td><h3><i class="fa-solid fa-user"></i><a href="">Usuarios</a></h3></td>
+	 			<td><h3><i class="fa-solid fa-database"></i><a href="">Respaldo</a></h3></td>
+	 			<td><h3><i class="fa-solid fa-chart-simple"></i><a href="">Estadisticas</a></h3></td>
+	 			<td><h3><i class="fa-solid fa-gears"></i><a href="">Ajustes</a></h3></td>
 	 		</tr>
 	 	</table>
 	 	<a href="../">Back to Index</a>

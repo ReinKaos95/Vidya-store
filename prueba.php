@@ -1,24 +1,24 @@
-
 <?php 
-
-if (isset($_POST['submit'])) {
 include 'config/db.php';
-$id=$_POST['id'];
-$nombre = $_POST['nombre'];
-$marca = $_POST['marca'];
-$fecha_salida = $_POST['fecha_salida'];
-$imagen=$_FILES['imagen']['name'];
-$ruta=$_FILES['imagen']['tmp_name'];
-$destino='img/'.$imagen;
-copy($ruta, $destino);
-$precio = $_POST['precio'];
+if (isset($_POST['submit'])) {
+  $image=$_FILES['image']['name'];
+  $ruta=$_FILES['image']['tmp_name'];
+  $destino='img/'.$image;
+  copy($ruta, $destino);
+  $titulo = $_POST['titulo'];
 
-$sql = "UPDATE Juegos SET nombre='$nombre', marca='$marca', fecha_salida='$fecha_salida', imagen='$destino', precio='$precio' WHERE id ='$id'";
+ 
+  
+  echo $destino . '<br>';
+  echo $titulo;
+
+  $sql = "INSERT INTO slider (imagen, titulo) VALUES ('$destino', '$titulo')";
   if (mysqli_query($conn, $sql)) {
     header("Location: index.php");
   }else{
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
+
 
 }
 

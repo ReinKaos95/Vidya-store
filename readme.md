@@ -19,6 +19,7 @@ Pronto
 - Muestrario de consolas 
 - Contacto
 - Panel de administrador y moderador
+- Slider
 
 
 ## Instalar (If you want to contribute)

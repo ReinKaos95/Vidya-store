@@ -4,6 +4,7 @@
 
 	<br><br>
 
+	<?php include 'slider.php'; ?>
 
 	 <div class="welcome-cube">
 	 	<h1>Bazar de juegos compra venta</h1>

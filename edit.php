@@ -13,19 +13,13 @@
 	$nombre = $row[1];
 	$marca = $row[2];
 	$fecha_salida = $row[3];
+	$precio = $row[5];
 
  ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Prueba de edicion</title>
-</head>
-<body>
+
 <center>
-		<form method="post" action="prueba.php" enctype="multipart/form-data">
+		<form method="post" action="" enctype="multipart/form-data">
 			<label>Prueba de edicion</label>
 			<br>
 			<input type="hidden" name="id" value="<?php echo $id ?>">
@@ -49,5 +43,31 @@
 		</form>
 
 	</center>
-</body>
-</html>
+
+
+
+
+<?php 
+
+if (isset($_POST['submit'])) {
+include 'config/db.php';
+$id=$_POST['id'];
+$nombre = $_POST['nombre'];
+$marca = $_POST['marca'];
+$fecha_salida = $_POST['fecha_salida'];
+$imagen=$_FILES['imagen']['name'];
+$ruta=$_FILES['imagen']['tmp_name'];
+$destino='img/'.$imagen;
+copy($ruta, $destino);
+$precio = $_POST['precio'];
+
+$sql = "UPDATE Juegos SET nombre='$nombre', marca='$marca', fecha_salida='$fecha_salida', imagen='$destino', precio='$precio' WHERE id ='$id'";
+  if (mysqli_query($conn, $sql)) {
+    header("Location: index.php");
+  }else{
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  }
+
+}
+
+ ?>

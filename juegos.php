@@ -52,7 +52,7 @@
                         <td><?php echo $key["nombre"] ?></td>
                         <td><?php echo $key["marca"] ?></td>
                         <td><?php echo $key["fecha_salida"] ?></td>
-                        <td><?php echo $key["precio"] ?></td>
+                        <td><?php echo $key["precio"] . "$"?></td>
                         <td>
                             <a href="edit.php?id=<?php echo $key["id"] ?>">Editar</a>
                         </td>
