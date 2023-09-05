@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 31-08-2023 a las 21:47:52
+-- Tiempo de generación: 05-09-2023 a las 22:24:18
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -40,11 +40,11 @@ CREATE TABLE `Consolas` (
 --
 
 INSERT INTO `Consolas` (`id`, `nombre`, `imagen`, `descripcion`, `precio`) VALUES
-(2, 'PlayStation Mini', 'img/61HJeA6L-SS.jpg', 'Version Mini del PS1', 120),
-(3, 'Nintendo Gamecube', 'img/GameCube-Console-Set.png', 'Consola de Nintendo de la 6ta Generacion', 100),
-(4, 'PlayStation 2', 'img/IEW2FZCWBBG5TCWR6K7JNAWUIY.jpg', 'Consola de Sony de la 6ta Generacion', 75),
-(5, 'PSP', 'img/1200px-Sony-PSP-1000-Body.png', 'Consola portable de Sony', 60),
-(6, 'NIntendo DS', 'img/Nintendo-DS-Lite-Black-Open.jpg', 'Consola portable de nINTENDO', 70);
+(1, 'PlayStation Mini', 'img/61HJeA6L-SS.jpg', 'Version Mini del PS1', 120),
+(2, 'Nintendo Gamecube', 'img/GameCube-Console-Set.png', 'Consola de Nintendo de la 6ta Generacion', 100),
+(3, 'PlayStation 2', 'img/IEW2FZCWBBG5TCWR6K7JNAWUIY.jpg', 'Consola de Sony de la 6ta Generacion', 75),
+(4, 'PSP', 'img/1200px-Sony-PSP-1000-Body.png', 'Consola portable de Sony', 80),
+(5, 'NIntendo DS', 'img/Nintendo-DS-Lite-Black-Open.jpg', 'Consola portable de Nintendo', 60);
 
 -- --------------------------------------------------------
 
@@ -67,8 +67,8 @@ CREATE TABLE `Juegos` (
 
 INSERT INTO `Juegos` (`id`, `nombre`, `marca`, `fecha_salida`, `imagen`, `precio`) VALUES
 (1, 'Tales of Symphonia', 'Bandai Namco', '2003-08-29', 'img/Tales_of_Symphonia_case_cover.jpg', 10),
-(2, 'F-Zero GX', 'Amusement Vision', '2003-07-25', 'img/F-Zero_GX_box_artwork.png', 10),
-(3, 'Super Smash Bros. Melee', 'HAL Laboratory', '2001-07-25', 'img/Super_Smash_Bros_Melee_box_art.png', 12),
+(2, 'Super Smash Bros. Melee', 'HAL Laboratory', '2001-11-21', 'img/Super_Smash_Bros_Melee_box_art.png', 15),
+(3, 'F-Zero GX', 'Amusement Vision', '2003-07-25', 'img/F-Zero_GX_box_artwork.png', 10),
 (4, 'Animal Crossing', 'Nintendo', '2001-04-14', 'img/Animal_Crossing_Coverart.png', 10),
 (5, 'Super Mario Sunshine', 'Nintendo', '2002-07-19', 'img/Super_mario_sunshine.jpg', 15);
 
@@ -110,10 +110,29 @@ CREATE TABLE `slider` (
 
 INSERT INTO `slider` (`id`, `imagen`, `titulo`) VALUES
 (1, 'img/image.png', 'Tales Of Synphonia'),
-(2, 'img/image3.png', 'F-Zero GX'),
-(3, 'img/image2.png', 'Super Smash Bros. Melee'),
+(2, 'img/image2.png', 'Super Smash Bros. Melee'),
+(3, 'img/image3.png', 'F-Zero GX'),
 (4, 'img/image4.png', 'Animal Crossing'),
 (5, 'img/image5.png', 'Super Mario Sunshine');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tipo_consola`
+--
+
+CREATE TABLE `tipo_consola` (
+  `id` int(11) DEFAULT NULL,
+  `tipo_consola` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `tipo_consola`
+--
+
+INSERT INTO `tipo_consola` (`id`, `tipo_consola`) VALUES
+(1, 'Sobremesa'),
+(2, 'Portable');
 
 -- --------------------------------------------------------
 
@@ -172,13 +191,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `Consolas`
 --
 ALTER TABLE `Consolas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `Juegos`
 --
 ALTER TABLE `Juegos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `roles_usuario`
