@@ -3,7 +3,7 @@
 <?php include 'layouts/style.php'; ?>
 <?php
   require 'config/db.php';
-  $sql="SELECT * FROM Juegos";
+  $sql="SELECT * from juegos INNER JOIN consolas on consolas.c_id=juegos.consola_id";
   $result = mysqli_query($conn, $sql);
 ?>
 
@@ -27,6 +27,15 @@
     <label>Precio</label>
     <input type="number" name="precio" value="0.0">
     <br>
+     <select name="rol">
+      <option value="#">Seleccione un rol</option>
+           <?php/*
+       while ($key = mysqli_fetch_assoc($result)) {*/
+      ?>
+      <option name="rol" value="<?php //echo $key["id"] ?>"><?php //echo $key["c_nombre"] ?></option>
+    <?php //} ?>
+    </select> 
+    <br>
     <input type="submit" name="submit">
   </form>
   <table class="table">
@@ -39,6 +48,7 @@
                     <th>Marca</th>
                     <th>Fecha de Salida</th>
                     <th>Precio</th>
+                    <th>Consola</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -53,6 +63,7 @@
                         <td><?php echo $key["marca"] ?></td>
                         <td><?php echo $key["fecha_salida"] ?></td>
                         <td><?php echo $key["precio"] . "$"?></td>
+                        <td><?php echo $key["c_nombre"] ?></td>
                         <td>
                             <a href="edit.php?id=<?php echo $key["id"] ?>">Editar</a>
                         </td>

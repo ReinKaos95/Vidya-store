@@ -37,9 +37,9 @@
 	 	<h1>Panel de moderacion</h1>
 	 	<table id="space">
 	 		<tr>
-	 			<td><h3><i class="fa-solid fa-gamepad"></i><a href="">Juegos</a></h3></td>
-	 			<td><h3><i class="fa-brands fa-playstation"></i><a href="">Consolas</a></h3></td>
-	 			<td><h3><i class="fa-solid fa-user"></i><a href="">Usuarios</a></h3></td>
+	 			<td><h3><i class="fa-solid fa-gamepad"></i><a href="juegos/index.php">Juegos</a></h3></td>
+	 			<td><h3><i class="fa-brands fa-playstation"></i><a href="consolas/index.php">Consolas</a></h3></td>
+	 			<td><h3><i class="fa-solid fa-user"></i><a href="usuarios/index.php">Usuarios</a></h3></td>
 	 			<td><h3><i class="fa-solid fa-database"></i><a href="">Respaldo</a></h3></td>
 	 			<td><h3><i class="fa-solid fa-chart-simple"></i><a href="">Estadisticas</a></h3></td>
 	 			<td><h3><i class="fa-solid fa-gears"></i><a href="">Ajustes</a></h3></td>

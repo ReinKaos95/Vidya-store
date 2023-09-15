@@ -3,27 +3,11 @@
 <?php include 'layouts/style.php'; ?>
 <?php
   require 'config/db.php';
-  $sql="SELECT * FROM Consolas";
+  $sql="SELECT * from consolas INNER JOIN tipo_consola on tipo_consola.id=consolas.tipo_consola_id";
   $result = mysqli_query($conn, $sql);
 ?>
 <body>
 <center>
-    
-  <form method="post" action="" enctype="multipart/form-data">
-    <label>Nombre</label>
-    <input type="text" name="nombre">
-    <br>
-    <label>Caratula</label>
-    <input type="file" name="imagen">
-    <br>
-     <label>Descripcion</label>
-    <input type="text" name="descripcion">
-    <br>
-    <label>Precio</label>
-    <input type="number" name="precio" value="0.0">
-    <br>
-    <input type="submit" name="submit">
-  </form>
   <table class="table">
 
             <thead>
@@ -33,6 +17,7 @@
                     <th>Nombre</th>
                     <th>Descripcion</th>
                     <th>Precio</th>
+                    <th>Tipo de consola</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -41,11 +26,12 @@
                 while ($key = mysqli_fetch_assoc($result)) {
                  ?>
                     <tr>
-                        <td><?php echo $key["id"] ?></td>
-                        <td><img src="<?php echo $key["imagen"] ?>"  width="150" height="300"></td>
-                        <td><?php echo $key["nombre"] ?></td>
-                        <td><?php echo $key["descripcion"] ?></td>
-                        <td><?php echo $key["precio"] . "$" ?></td>
+                        <td><?php echo $key["c_id"] ?></td>
+                        <td><img src="<?php echo $key["c_imagen"] ?>"  width="150" height="300"></td>
+                        <td><?php echo $key["c_nombre"] ?></td>
+                        <td><?php echo $key["c_descripcion"] ?></td>
+                        <td><?php echo $key["c_precio"] . "$" ?></td>
+                        <td><?php echo $key["tipo_consola"] ?></td>
                         <td>
                             <a href="editar.php?id=<?php echo $key["id"] ?>">Editar</a>
                         </td>

@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";
 $password = "";
-$dbname = "tiendita";
+$dbname = "vidyastore";
 
 try {
     $conn = mysqli_connect($host, $user, $password, $dbname);
