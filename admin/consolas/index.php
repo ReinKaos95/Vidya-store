@@ -38,7 +38,7 @@
 
 
   <?php 
-include 'config/db.php';
+include '../../config/db.php';
 if (isset($_POST['submit'])) {
   $nombre = $_POST['nombre'];
   $imagen=$_FILES['imagen']['name'];

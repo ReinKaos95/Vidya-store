@@ -10,34 +10,7 @@
 
 <body>
 <center>
-    
-  <form method="post" action="" enctype="multipart/form-data">
-    <label>Nombre</label>
-    <input type="text" name="nombre">
-    <br>
-    <label>Marca</label>
-    <input type="text" name="marca">
-    <br>
-    <label>Fecha de lanzamiento</label>
-    <input type="date" name="fecha_salida">
-    <br>
-    <label>Caratula</label>
-    <input type="file" name="imagen">
-    <br>
-    <label>Precio</label>
-    <input type="number" name="precio" value="0.0">
-    <br>
-     <select name="rol">
-      <option value="#">Seleccione un rol</option>
-           <?php/*
-       while ($key = mysqli_fetch_assoc($result)) {*/
-      ?>
-      <option name="rol" value="<?php //echo $key["id"] ?>"><?php //echo $key["c_nombre"] ?></option>
-    <?php //} ?>
-    </select> 
-    <br>
-    <input type="submit" name="submit">
-  </form>
+
   <table class="table">
 
             <thead>
