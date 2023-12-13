@@ -1,10 +1,11 @@
-<?php include 'layouts/navbar.php'; ?>
+<?php include 'Public/Layouts/navbar.php'; ?>
 
-<?php include 'layouts/style.php'; ?>
+<?php include 'Public/Layouts/style.php'; ?>
+
 <?php
-  require 'config/db.php';
+  /*require 'config/db.php';
   $sql="SELECT * from consolas INNER JOIN tipo_consola on tipo_consola.id=consolas.tipo_consola_id";
-  $result = mysqli_query($conn, $sql);
+  $result = mysqli_query($conn, $sql);*/
 ?>
 <body>
 <center>
@@ -22,24 +23,22 @@
                 </tr>
             </thead>
             <tbody>
-                <?php
-                while ($key = mysqli_fetch_assoc($result)) {
-                 ?>
+
                     <tr>
-                        <td><?php echo $key["c_id"] ?></td>
-                        <td><img src="<?php echo $key["c_imagen"] ?>"  width="150" height="300"></td>
-                        <td><?php echo $key["c_nombre"] ?></td>
-                        <td><?php echo $key["c_descripcion"] ?></td>
-                        <td><?php echo $key["c_precio"] . "$" ?></td>
-                        <td><?php echo $key["tipo_consola"] ?></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td>
-                            <a href="editar.php?id=<?php echo $key["id"] ?>">Editar</a>
+                           
                         </td>
                         <td>
-                            <a href="eliminar.php?id=<?php echo $key["id"] ?>">Eliminar</a>
+                           
                         </td>
                     </tr>
-                <?php } ?>
+
             </tbody>
         </table>
 </center>
@@ -47,7 +46,7 @@
 
 
 <?php 
-include 'config/db.php';
+/*include 'config/db.php';
 if (isset($_POST['submit'])) {
   $nombre = $_POST['nombre'];
   $imagen=$_FILES['imagen']['name'];
@@ -58,11 +57,11 @@ if (isset($_POST['submit'])) {
   $precio = $_POST['precio'];
 
  
-  /*echo $nombre . '<br>';
+  echo $nombre . '<br>';
   echo $marca . '<br>';
   echo $fecha_salida . '<br>';
   echo $destino . '<br>';
-  echo $precio;*/
+  echo $precio;
 
   $sql = "INSERT INTO Consolas (nombre, imagen, descripcion, precio) VALUES ('$nombre', '$destino', '$descripcion',  '$precio') ";
   if (mysqli_query($conn, $sql)) {
@@ -73,5 +72,5 @@ if (isset($_POST['submit'])) {
 
 
 }
-
+*/
  ?>
